@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    border: none;
+}
+
+body {
+    margin: 0;
+    background: #f5f6f8;
+    color: #17191c;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidenav */
+
+.sidenav {
+    width: 300px;
+    min-height: 100vh;
+    padding: 28px 16px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+.sidenav-logo {
+    padding: 0 16px;
+    margin-bottom: 40px;
+    color: #00AC9E;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.sidenav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidenav-link {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidenav-link {
+    background: #f0fdfa;
+    color: #00AC9E;
+}
+
+.sidenav-link.active {
+    background: #00AC9E;
+    color: #ffffff;
+}
+
+/* Dashboard */
+
+.dashboard {
+    flex: 1;
+    max-width: 100%;
+    padding: 40px;
+}
+
+/* Date filter */
+
+.date-filter {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.date-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.date-filter-field label {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.date-filter-field input {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17191c;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.date-filter-field input {
+    outline: none;
+    border-color: #00AC9E;
+    box-shadow: 0 0 0 3px rgba(0, 172, 158, 0.12);
+}
+
+.date-filter-separator {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+}
+
+.filter-button {
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background: #00AC9E;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.filter-button {
+    background: #008f84;
+}
+
+.filter-button {
+    transform: translateY(1px);
+}
+
+.date-filter-field input[type="date"] {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17191c;
+    font-family: inherit;
+    font-size: 14px;
+    color-scheme: light;
+}
+
+.date-filter-field input[type="date"]:focus {
+    outline: none;
+    border-color: #00AC9E;
+    box-shadow: 0 0 0 3px rgba(0, 172, 158, 0.12);
+}
+
+.date-filter-field input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* Database Settings */
+.database-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.database-settings-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.database-settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.database-settings-field label {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.database-settings-field input {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17191c;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.database-settings-field input:focus {
+    border-color: #00AC9E;
+    box-shadow: 0 0 0 3px rgba(0, 172, 158, 0.12);
+}
+
+.database-settings-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    color: #17191c;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.database-settings-checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: #00AC9E;
+    cursor: pointer;
+}
+
+.database-settings-button {
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background: #00AC9E;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.database-settings-button:hover {
+    background: #008f84;
+}
+
+.database-settings-button:active {
+    transform: translateY(1px);
+}
+
+.settings-message {
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.settings-message.success {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.settings-message.error {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+/* Header */
+
+.dashboard-header {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #00AC9E;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* Summary cards */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    min-height: 175px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card-title {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stat-card-value {
+    margin: 20px 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-card-description {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidenav {
+        width: 190px;
+    }
+
+    .dashboard {
+        padding: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
