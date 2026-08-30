@@ -1,1 +1,16 @@
-# CSE-Dashboard
+# CSEProject on harjoitustehtävä, joka esittää pelilaitteiden statistiikka dashboardia.
+
+# Sovellus tehty web-pohjaiseksi, joten se löytyy sekä käynnistettävänä .exe tiedostona sekä mahdollista myös konfiguroida internettiin nettisivuksi.
+
+# Käynnistys tapahtuu .exe tiedoston avaamalla, joka käynnistää sovelluksen frontendin ja  backendin automaattisesti. Vaihtoehtoisesti käynnistyksen voi tehdä Visual Studio Codessa frontend ”npm run dev” -komennolla ja backend ”dotnet run” -komennolla. Nämä komennot mahdollistavat toimivuuden normaalina nettisivuna. HUOM! .NET SDK täytyy olla koneelle asennettuna, jotta backend voidaan käynnistää.
+
+# Tietokanta on muutettavissa mihin tahansa tietokantaan sovelluksen "Database Settings" -osiosta. Ennen tietokanta asetusten tallennusta yhteys mahdollista testata "Test Connection" -napilla ja tietokanta asetukset myös tallennettavissa "Save Settings" -napilla. Tallennetut tiedot löytyvät C:\Users<user>\AppData\Local\CSEProject\database-settings.json tiedostosta. Ohjeena sen verran jos käytät SSMS, jätäthän username ja portin tyhjäksi.
+
+# Teknologioina sovelluksessa on käytetty Frontissa React + Vite + Typescript -comboa ja backendin puolelta löytyy .NET ja Entity Framework sekä C#. Frontissa kirjastona on ainoastaan käytetty recharts, luomaan kuvaajat dahsboardiin. Exe on luotu Electron Frameworkilla, jotta siitä saadaan oikea sovellus. Sovellus koostuu kaikkinensa frontendistä, backendistä sekä tietokannasta. Sovellus toimii siten, että frontend lähettää HTTP GET -pyyntöjä backendiin, joka hakee datan tietokannasta. Tiedot palautetaan frontendiin JSON -muodossa, jolloin frontend käsittelee datan ja esittää sen kortteina sekä kaavioina.
+
+# Valitsin ASP.NET Core backendiin, koska edellisestä työpaikasta se oli minulle tutuin. Tätä tuli tehtyä siellä miltein päivittäin, mutta haasteena oli se, että ensimmäistä kertaa rakensin alusta loppuun .NET backendin. Olen tehnyt aiemmin vain pienempiä ominaisuuksia, joten tästä sain myös uutta oppia. React valikoitui frontiksi, koska sitä olen työstänyt aiemmin mm. koulussa ja  vapaa-ajalla. Lisäksi valintani perustui siihen, etten ole sillä hetkeen tehnyt mitään sovellusta. Ennen kaikkea tarkoituksenani oli verestää taitojani Reactin suhteen.
+
+# Dashboard keskittyy nyt vain perustoiminnallisuuteen, joten mm. käyttöliittymässä on kehittämistä, kuten lataus-, tyhjä- ja virhetilanteiden käsittely sekä responsiivisuus. Kehitystä vaatisi myös tiedon suodatusmahdollisuudet. Niitä voitaisiin laajentaa mm. laitteen, genren tai alueen perusteella suodatettaviksi. Myös visualisoinnin ja kaavioiden osalta voisi tehdä muutoksia, jotta tietoa voitaisiin tarkastella laajemmalla tasolla. Tuotantokäyttöä ajatellen olisi hyvä optimoida tietokantakyselyiden ja dashboardin suorituskykyä, jotta sovellus toimii laajemmilla datamäärillä. Myös tietoturvaan pitäisi kiinnittää enemmän huomiota. Tulevaisuudessa sovellukseen voitaisiin kehittää autentikointi -järjestelmä eli kirjautuminen dashboardiin. Tämä pitäisi sisällään ominaisuudet, jossa pääkäyttäjä pystyy hallitsemaan käyttöoikeuksia ja mahdollisuuden, jossa  käyttäjät voivat muokata dashboardia omaan tarpeisiin sopivaksi. Myös jatkoa ajetellen optimointia ja turhien moduulien poisto.
+
+
+# 12 tuntia kului aikaa sovelluksen tekemiseen tuohon vaiheeseen. Eniten aikaa kului backendin rakentamiseen ja tietokantakyselyiden toteuttamiseen. Myös ongelmien sekä electronin käyttö toi omat haasteensa tehtävää tehdessä.
